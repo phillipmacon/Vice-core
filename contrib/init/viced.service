@@ -1,0 +1,26 @@
+[Unit]
+Description=Vice's distributed currency daemon
+After=network.target
+
+[Service]
+User=vice
+Group=vice
+
+Type=forking
+PIDFile=/var/lib/viced/viced.pid
+
+ExecStart=/usr/bin/viced -daemon -pid=/var/lib/viced/viced.pid \
+          -conf=/etc/vice/vice.conf -datadir=/var/lib/viced
+
+ExecStop=-/usr/bin/vice-cli -conf=/etc/vice/vice.conf \
+         -datadir=/var/lib/viced stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

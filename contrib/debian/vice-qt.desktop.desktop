@@ -1,0 +1,11 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Vice
+Comment=Vice P2P Cryptocurrency
+Exec=vice-qt %u
+Terminal=false
+Type=Application
+Icon=vice128
+MimeType=x-scheme-handler/vice;
+Categories=Office;Finance;
+Name[en_US]=vice-qt.desktop

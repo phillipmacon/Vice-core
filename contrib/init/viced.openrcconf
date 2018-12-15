@@ -1,0 +1,26 @@
+# /etc/conf.d/viced: config file for /etc/init.d/viced
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/vice/vice.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/viced"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/viced.pid"
+
+# Where to write viced data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/viced"
+
+# User and group to own viced process
+#BITCOIND_USER="vice"
+#BITCOIND_GROUP="vice"
+
+# Path to viced executable
+#BITCOIND_BIN="/usr/bin/viced"
+
+# Nice value to run viced under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""
